@@ -14,6 +14,12 @@ public class Isoceles extends Triangle {
     /**
      * @return the side
      */
+    
+    public Isoceles(double base, double side){
+        setBase(base);
+        setSide(side);
+    }
+    
     public double getSide() {
         return side;
     }
@@ -32,7 +38,12 @@ public class Isoceles extends Triangle {
 
     @Override
     public double calculatePerimeter() {
-        return (getSide()*2)*getBase();
+        return (getSide()*2)+getBase();
+    }
+    
+    public double getHeight(){
+        
+        return (Math.sqrt((getSide()*getSide())-((getBase()*getBase())/4)));
     }
     
     

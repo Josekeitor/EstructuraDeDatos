@@ -13,6 +13,11 @@ public class Rectangle extends Shape {
     private double base;
     private double height;
 
+    public Rectangle(double base, double height){
+        setHeight(height);
+        setBase(base);
+    }
+    
     /**
      * @return the base
      */

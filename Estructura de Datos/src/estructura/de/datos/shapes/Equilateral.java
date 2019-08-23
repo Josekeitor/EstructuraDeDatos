@@ -11,6 +11,10 @@ package estructura.de.datos.shapes;
  */
 public class Equilateral extends Triangle{
     private double side;
+    
+    public Equilateral(double side){
+        setSide(side);
+    }
     /**
      * @return the side
      */
@@ -27,12 +31,17 @@ public class Equilateral extends Triangle{
 
     @Override
     public double calculateArea() {
-       return (getBase()*getHeight())/2;
+        
+       return (getSide()*getHeight())/2;
     }
 
     @Override
     public double calculatePerimeter() {
         return getSide()*3;
+    }
+    
+    public double getHeight(){
+        return((getSide()*Math.sqrt(3))/2);
     }
     
     
