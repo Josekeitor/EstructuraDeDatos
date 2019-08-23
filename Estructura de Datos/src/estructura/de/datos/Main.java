@@ -33,11 +33,13 @@ public class Main {
                 double side = in.nextDouble();
                 
                 shape = new Square(side);
+                in.nextLine();
                 break;
             case"2":
                 System.out.println("Dame el radio del círculo: ");
                 double radius = in.nextDouble();
                 shape = new Circle(radius);
+                in.nextLine();
                 break;
             case "3":
                 System.out.println("Dame la base del rectángulo: ");
@@ -46,13 +48,14 @@ public class Main {
                 double height = in.nextDouble();
                 
                 shape = new Rectangle(base, height);
+                in.nextLine();
                 break;
             case "4":
                 System.out.println("¿Qué tipo de triángulo quieres calcular?");
                 System.out.println(" ");
                 System.out.println("1) Isóceles  2) Equilátero  3) Escaleno");
                 String triangleType = in.nextLine();
-               
+                
                 switch(triangleType){
                     case("1"):
                         System.out.println("Dame la base del triángulo:");
@@ -67,7 +70,7 @@ public class Main {
                         shape = new Equilateral(sideEqui);
                         break;
                     case("3"):
-                        System.out.println("Dame los 3 lados del triángulo separados por un espacio: ");
+                        System.out.println("Dame los 3 lados del triángulo separados por un espacio ");
                         
                         String[] sides = in.nextLine().split(" ");
                         shape = new Scalene(Double.parseDouble(sides[0]), Double.parseDouble(sides[1]), Double.parseDouble(sides[2]));
@@ -89,7 +92,7 @@ public class Main {
                 shape = new Square(side1);
                 break;
         }
-        in.nextLine();
+        
         System.out.println("¿Que deseas calcular?   1) Perímetro     2) Área");
         
         String selectedCalc = in.nextLine();
@@ -97,10 +100,14 @@ public class Main {
         
         switch(selectedCalc){
             case "1":
+                System.out.println(" ");
                 System.out.println("Resultado: "+ shape.calculatePerimeter());
+                System.out.println(" ");
                 break;
             case "2":
+                System.out.println(" ");
                 System.out.println("Resultado: "+ shape.calculateArea());
+                System.out.println(" ");
                 break;
                 
         }
